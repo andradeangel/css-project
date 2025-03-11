@@ -12,24 +12,30 @@
 </head>
 <body>
   <header>
-    <nav>
-      <div>
+    <nav class="navbar">
+      <div class="navbar__logo">
         <img src="assets/logo.jpg" alt="Logo de la página">
       </div>
-      <ul>
-        <li>Inicio</li>
-        <li>Baile</li>
-        <li>Volley</li>
-        <li>Natación</li>
-        <li>Boxeo</li>
-        <li>Futbol</li>
-      </ul>
+
+      <input type="checkbox" id="check" class="navbar__input-check" hidden/>
+      
+      <div class="navbar__menu">
+        <ul>
+          <li>Inicio</li>
+          <li>Baile</li>
+          <li>Volley</li>
+          <li>Natación</li>
+          <li>Boxeo</li>
+          <li>Futbol</li>
+        </ul>
+      </div>
+      
       <div>
         <button>Solicita Asesoría</button>
       </div>
+      
       <div>
-        <input type="checkbox" id="check">
-        <span class="material-symbols-outlined" name="check" for="check">menu</span>
+        <label class="material-symbols-outlined" for="check">menu</label>
       </div>
     </nav>
   </header>
