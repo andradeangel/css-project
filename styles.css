@@ -1,4 +1,13 @@
+*{
+    margin: 0;  
+}
+
 /* NAVBAR */
 .navbar__input-check:checked ~ .navbar__menu {
     display: none;
+}
+
+/* MAIN */
+.main__banner{
+    background-image: url(assets/paisaje.jpg);
 }
