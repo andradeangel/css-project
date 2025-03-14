@@ -8,31 +8,31 @@
   <meta name="description" content="Vida Activa">
   <meta name="author" content="Ing. Andrade Angel">
   <title>Vida Activa</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
   <script src="https://kit.fontawesome.com/78b67f78ae.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
     <nav class="navbar">
       <div class="navbar__logo">
-        <img src="assets/logo.jpg" alt="Logo de la página">
+        <img src="assets/logo.jpg" alt="Logo de la página" title="Logo de la página">
       </div>
 
       <input type="checkbox" id="check" class="navbar__input-check" hidden/>
       
       <div class="navbar__menu">
-        <ul>
-          <li>Inicio</li>
-          <li>Baile</li>
-          <li>Volley</li>
-          <li>Natación</li>
-          <li>Boxeo</li>
-          <li>Futbol</li>
+        <ul class="navbar__menu__list">
+          <li class="navbar__menu__list--item"><a href="#inicio">Inicio</a></li>
+          <li class="navbar__menu__list--item"><a href="#baile">Baile</a></li>
+          <li class="navbar__menu__list--item"><a href="#volley">Volley</a></li>
+          <li class="navbar__menu__list--item"><a href="#natacion">Natación</a></li>
+          <li class="navbar__menu__list--item"><a href="#box">Boxeo</a></li>
+          <li class="navbar__menu__list--item"><a href="#futbol">Futbol</a></li>
         </ul>
       </div>
       
-      <div>
-        <button>Solicita Asesoría</button>
+      <div class="navbar__contact">
+        <a href="#contact">Solicita Asesoría</a>
       </div>
       
       <div>
@@ -41,9 +41,9 @@
     </nav>
   </header>
 
-  <main class="main">
-    <div class="main__banner">
-      <img src="assets/body.jpeg" alt="Foto de una persona haciendo ejercicio">
+  <main class="main"  id="inicio>
+    <section class="main__banner">
+      <img src="assets/body.jpeg" alt="Foto de una persona haciendo ejercicio" title="Persona Fit">
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque <span>Click</span></p>
       <div class="main__banner__icons">
         <label class="fa-brands fa-whatsapp"></label>
@@ -51,38 +51,72 @@
         <label class="fa-brands fa-github"></label>
         <label class="fa-solid fa-globe"></label>
       </div>
-      <p>
-        Copyright &copy; 2025 Vida Activa
-      </p>
-    </div>
-    <div class="main__content">
+    </section>
+    
+    <section class="main__content">
       <h1>Vida Activa</h1>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ut consectetur eos earum vitae dignissimos minima facere, autem impedit aliquam necessitatibus iure, adipisci voluptatum, fuga aliquid doloribus? Officiis deleniti nemo asperiores.</p>
       <h2>Actividades de aquí</h2>
       <div class="main__content__activities">
-        <div class="main__content__activities --item1">
-          <div><img src="assets/baile.jpg" alt="Imagen de personas bailando"></div>
+        <div class="main__content__activities --item1" id="baile">
+          <div><img src="assets/baile.jpg" alt="Imagen de personas bailando" title="Personas bailando"></div>
           <h3>Baile</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
         </div>
-        <div class="main__content__activities --item2">
-          <div><img src="assets/volley.webp" alt="Imagen de personas jugando Volleyball"></div>
+        <div class="main__content__activities --item2" id="volley">
+          <div><img src="assets/volley.webp" alt="Imagen de personas jugando Volleyball" title="Personas jugando Volleyball"></div>
           <h3>Volleyball</h3>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
         </div>
-        <div class="main__content__activities --item3"></div>
-        <div class="main__content__activities --item4"></div>
-        <div class="main__content__activities --item5"></div>
+        <div class="main__content__activities --item3" id="natacion">
+          <div><img src="assets/natacion.jpg" alt="Imagen de persona nadando" title="Persona nadando"></div>
+          <h3>Natación</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+        </div>
+        <div class="main__content__activities --item4" id="box">
+          <div><img src="assets/box.jpg" alt="Imagen de persona boxeando" title="Persona boxeando"></div>
+          <h3>Boxeo</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+        </div>
+        <div class="main__content__activities --item5" id="futbol">
+          <div><img src="assets/futbol.jpg" alt="Imagen de jugador de futbol" title="Jugador de futbol"></div>
+          <h3>Futbol</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+        </div>
       </div>
-    </div>
+    </section>
+
+    <section class="main__contact" id="contact">
+      <h2>Solicita Asesoría</h2>
+      <form>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur eos possimus optio iusto blanditiis neque alias? Repudiandae a architecto facilis harum, laborum tempora pariatur dolorum ea, ipsam consequuntur asperiores? Molestiae.</p>
+        <label>Nombre: </label>
+        <input type="text" placeholder="Ingresa tu nombre" required>
+        <label>Apellido:</label>
+        <input type="text" placeholder="Ingresa tu apellido" required>
+        <label>Correo:</label>
+        <input type="email" placeholder="Ingresa tu correo" required>
+        <label">Mensaje: </label>
+        <input type="textarea" placeholder="Ingresa tu mensaje" required>
+        <input type="submit" value="Enviar">
+      </form>
+    </section>
   </main>
-
+  
   <aside>
-
+    
   </aside>
 
   <footer>
-
+    <label class="material-symbols-outlined">home</label>
+    <p>1234 16 de Julio Street, La Paz - Bolivia</p>
+    <label class="material-symbols-outlined">smartphone</label>
+    <p>+591 75270601</p>
+    <label class="material-symbols-outlined">mail</label>
+    <p>andradevelop@gmail.com</p>
+    <p>
+      Copyright &copy; 2025 Vida Activa
+    </p>
   </footer>
 </body>
 </html>

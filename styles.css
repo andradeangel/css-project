@@ -3,6 +3,25 @@
 }
 
 /* NAVBAR */
+.navbar{
+    display: flex;
+}
+.navbar__logo{
+    max-width: 15%;
+}
+.navbar__logo > img{
+    width: 100%;
+}
+.navbar__menu__list{
+    display: flex;
+    list-style: none;
+}
+.navbar__menu__list--item a {
+    text-decoration: none;
+}
+.navbar__contact a{
+    text-decoration: none;
+}
 .navbar__input-check:checked ~ .navbar__menu {
     display: none;
 }
