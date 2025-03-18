@@ -15,7 +15,7 @@
   <header>
     <nav class="navbar">
       <div class="navbar__logo">
-        <img src="assets/logo.jpg" alt="Logo de la página" title="Logo de la página">
+        <a href=""><img src="assets/logo.jpg" alt="Logo de la página" title="Logo de la página"></a>
       </div>
 
       <input type="checkbox" id="check" class="navbar__input-check" hidden/>
@@ -29,19 +29,20 @@
           <li class="navbar__menu__list--item"><a href="#box">Boxeo</a></li>
           <li class="navbar__menu__list--item"><a href="#futbol">Futbol</a></li>
         </ul>
+        <div class="navbar__contact">
+          <a href="#contact">Solicita Asesoría</a>
+        </div>
       </div>
-      
-      <div class="navbar__contact">
+      <div class="navbar__contact navbar__contact--mobile">
         <a href="#contact">Solicita Asesoría</a>
       </div>
-      
-      <div>
+      <div class="navbar__icon">
         <label class="material-symbols-outlined" for="check">menu</label>
       </div>
     </nav>
   </header>
 
-  <main class="main"  id="inicio>
+  <main class="main"  id="inicio">
     <section class="main__banner">
       <img src="assets/body.jpeg" alt="Foto de una persona haciendo ejercicio" title="Persona Fit">
       <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque <span>Click</span></p>
@@ -96,7 +97,7 @@
         <input type="text" placeholder="Ingresa tu apellido" required>
         <label>Correo:</label>
         <input type="email" placeholder="Ingresa tu correo" required>
-        <label">Mensaje: </label>
+        <label>Mensaje: </label>
         <input type="textarea" placeholder="Ingresa tu mensaje" required>
         <input type="submit" value="Enviar">
       </form>
@@ -104,7 +105,9 @@
   </main>
   
   <aside>
-    
+    <div class="aside__icon">
+      <label class="material-symbols-outlined">north</label>
+    </div>
   </aside>
 
   <footer>

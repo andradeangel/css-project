@@ -4,16 +4,22 @@
 
 /* NAVBAR */
 .navbar{
+    padding: 30px 20px;
     display: flex;
+    justify-content: space-around;
 }
 .navbar__logo{
-    max-width: 15%;
+    background-color: tomato;
+    width: 50px;
+    height: 50px;
 }
-.navbar__logo > img{
+.navbar__logo > a > img{
     width: 100%;
 }
+.material-symbols-outlined{
+    width: 50px;
+}
 .navbar__menu__list{
-    display: flex;
     list-style: none;
 }
 .navbar__menu__list--item a {
@@ -23,6 +29,9 @@
     text-decoration: none;
 }
 .navbar__input-check:checked ~ .navbar__menu {
+    display: none;
+}
+.navbar__input-check:not(:checked) ~ .navbar__contact--mobile {
     display: none;
 }
 
