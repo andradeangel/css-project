@@ -1,23 +1,52 @@
 *{
     margin: 0;  
+    padding: 0;
+    box-sizing: border-box;
+    --colorFirst: #22F052;
+    --colorSecond: #3CC55C;
+    --colorThird: #499B5C;
+    --colorFourth: #487051;
+    --colorFifth: #38463B;
+    --colorSixth: #303D33;
 }
 
 /* NAVBAR */
+header{
+    position: fixed;
+    background-color: var(--colorFirst);
+    top: 0;
+    left: 0;
+    width: 100%;
+}
 .navbar{
     padding: 30px 20px;
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    height: auto;
 }
 .navbar__logo{
-    background-color: tomato;
     width: 50px;
     height: 50px;
 }
 .navbar__logo > a > img{
     width: 100%;
 }
+.navbar__logo > a{
+    display: inline-block;
+    height: 50px;
+}
 .material-symbols-outlined{
     width: 50px;
+}
+.navbar__menu{
+    height: 10rem;
+    padding: 13px 0 0 13px;
+    text-align: center;
+}
+.navbar__contact--mobile{
+    text-align: center;
+    margin-left: 13px;
 }
 .navbar__menu__list{
     list-style: none;
@@ -28,14 +57,42 @@
 .navbar__contact a{
     text-decoration: none;
 }
+.navbar__icon{
+   align-items: center;
+}
+.material-symbols-outlined{
+    width: 24px;
+}
 .navbar__input-check:checked ~ .navbar__menu {
     display: none;
+}
+.navbar__input-check:checked ~ .navbar__icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px;
 }
 .navbar__input-check:not(:checked) ~ .navbar__contact--mobile {
     display: none;
 }
+.navbar__input-check:not(:checked) ~ .navbar__icon, .navbar__logo{
+    align-self: start;
+}
+.navbar__input-check:not(:checked) ~ .navbar__icon{
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    padding: 13px;
+}
+
+
+
+
 
 /* MAIN */
+.main{
+    margin-top: 100px;
+}
 .main__banner{
     background-image: url(assets/paisaje.jpg);
 }
