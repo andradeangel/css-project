@@ -8,6 +8,8 @@
     --colorFourth: #487051;
     --colorFifth: #38463B;
     --colorSixth: #303D33;
+    --radio: 5px;
+    font-family: "Montserrat", sans-serif;
 }
 
 /* NAVBAR */
@@ -44,21 +46,62 @@ header{
     padding: 13px 0 0 13px;
     text-align: center;
 }
-.navbar__contact--mobile{
-    text-align: center;
-    margin-left: 13px;
-}
 .navbar__menu__list{
     list-style: none;
 }
 .navbar__menu__list--item a {
     text-decoration: none;
 }
-.navbar__contact a{
+.navbar__contact{
+    width: 200px;
+    height: 50px;
+    border: 2px solid var(--colorFifth);
+    position: relative;
+    padding: 10px;
+    border-radius: var(--radio);
+    background-color: var(--colorThird);
+    box-shadow: var(--colorSixth) 0 0 10px;
+}
+.navbar__contact > a{
+    color: white;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transition: .5s;
+}
+.navbar__contact--mobile{
+    text-align: center;
+    margin-left: 13px;
+}
+.navbar__contact a:hover{
+    background-color: var(--colorSecond);
+    border-radius: var(--radio);    
+}
+.navbar__menu__list--item a{
+    letter-spacing: normal;
+    color: var(--colorSixth);
+    display: inline-block;
+    width: 100%;
+    border-bottom: solid 1px transparent;
+    transition: .5s;
+}
+.navbar__menu__list--item a:hover{
+    letter-spacing: 10px;
+    border-bottom: solid 1px var(--colorFifth);
 }
 .navbar__icon{
    align-items: center;
+}
+.navbar__icon label{
+    cursor: pointer;
 }
 .material-symbols-outlined{
     width: 24px;
