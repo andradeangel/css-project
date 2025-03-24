@@ -15,7 +15,7 @@
 /* NAVBAR */
 header{
     position: fixed;
-    background-color: var(--colorFirst);
+    background-image: linear-gradient(90deg, var(--colorSecond), var(--colorFirst));
     top: 0;
     left: 0;
     width: 100%;
@@ -31,12 +31,19 @@ header{
     width: 50px;
     height: 50px;
 }
-.navbar__logo > a > img{
-    width: 100%;
-}
 .navbar__logo > a{
     display: inline-block;
     height: 50px;
+}
+.navbar__logo > a > img{
+    width: 100%;
+    filter: brightness(none);
+    filter: drop-shadow(0 0 3px var(--colorSixth));
+    transition: .5s;
+}
+.navbar__logo > a > img:hover{
+    filter: brightness(.8);
+    filter: drop-shadow(0 0 10px var(--colorSixth));
 }
 .material-symbols-outlined{
     width: 50px;
@@ -51,6 +58,7 @@ header{
 }
 .navbar__menu__list--item a {
     text-decoration: none;
+    margin-bottom: 10px;
 }
 .navbar__contact{
     width: 200px;
@@ -61,6 +69,10 @@ header{
     border-radius: var(--radio);
     background-color: var(--colorThird);
     box-shadow: var(--colorSixth) 0 0 10px;
+}
+.navbar__contact--mobile{
+    text-align: center;
+    margin-left: 13px;
 }
 .navbar__contact > a{
     color: white;
@@ -77,13 +89,9 @@ header{
     right: 0;
     transition: .5s;
 }
-.navbar__contact--mobile{
-    text-align: center;
-    margin-left: 13px;
-}
 .navbar__contact a:hover{
-    background-color: var(--colorSecond);
-    border-radius: var(--radio);    
+    background-color: var(--colorFourth);
+    border-radius: 3px;    
 }
 .navbar__menu__list--item a{
     letter-spacing: normal;
@@ -91,14 +99,24 @@ header{
     display: inline-block;
     width: 100%;
     border-bottom: solid 1px transparent;
+    text-shadow: 0 0 0px var(--colorSixth);
+
     transition: .5s;
 }
 .navbar__menu__list--item a:hover{
     letter-spacing: 10px;
     border-bottom: solid 1px var(--colorFifth);
+    text-shadow: 0 0 100px var(--colorSixth);
 }
 .navbar__icon{
    align-items: center;
+   border-radius: 50%;
+   background-color: none;
+   transition: .5s;
+}
+.navbar__icon:hover{
+    background-color: var(--colorThird);
+    box-shadow: 0 0 10px var(--colorSixth);
 }
 .navbar__icon label{
     cursor: pointer;
