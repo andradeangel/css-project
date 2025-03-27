@@ -23,11 +23,11 @@ header{
     width: 100%;
 }
 .navbar{
-    padding: 30px 20px;
+    padding: 20px 40px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    height: auto;
+    height: 6rem;
 }
 .navbar__logo{
     width: 50px;
@@ -36,6 +36,7 @@ header{
 .navbar__logo > a{
     display: inline-block;
     height: 50px;
+    width: 50px;
     transition: 1s;
 }
 .navbar__logo > a:hover{
@@ -53,7 +54,8 @@ header{
     width: 24px;
 }
 .navbar__menu{
-    height: 17rem;
+    padding: 14px 20px;
+    height: 56px;
     text-align: center;
 }
 .navbar__menu__list{
@@ -80,7 +82,7 @@ header{
 }
 .navbar__contact{
     width: 200px;
-    height: 50px;
+    height: 40px;
     border: 2px solid var(--colorFifth);
     position: relative;
     padding: 10px;
@@ -115,7 +117,7 @@ header{
    align-items: center;
    border-radius: 50%;
    background-color: none;
-   transition: .5s;
+   padding: 13px;
 }
 .navbar__icon:hover{
     background-color: var(--colorThird);
@@ -125,46 +127,43 @@ header{
     cursor: pointer;
     user-select: none;
 }
-.navbar__input-check:checked ~ .navbar__menu2 {
-    display: none;
+.navbar__input-check:checked ~ .navbar{
+    height: 19rem;
 }
-.navbar__input-check:not(:checked) ~ .navbar__menu{
-    height: 0;
-    width: 0;
-    margin-bottom: 0;
-    overflow: hidden;
+.navbar__input-check:checked ~ .navbar > .navbar__logo{
+    align-self: start;
+    margin-top: 3px;
+}
+.navbar__input-check:checked ~ .navbar > .navbar__menu{
+    align-self: start;
+}
+.navbar__input-check:not(:checked) ~ .navbar > .navbar__menu{
+    align-self: baseline;
     transition: .5s;
 }
-.navbar__input-check:checked ~ .navbar__menu {
-    transition: .5s;
-    overflow: hidden;
-}
-.navbar__input-check:checked ~ .navbar__icon{
+.navbar__input-check:checked ~ .navbar > .navbar__icon{
+    margin-top: 3px;
     display: flex;
-    align-items: start;
+    align-self: start;  
+    align-items: center;
     justify-content: center;
-    padding: 13px;
 }
-.navbar__input-check:not(:checked) ~ .navbar__icon{
+.navbar__input-check:not(:checked) ~ .navbar > .navbar__icon{
     display: flex;
     align-items: center;
-    align-self: start;
     justify-content: center;
-    padding: 13px;
+}   
+@media (max-width: 420px){
+    .navbar{
+        padding: 20px 5px;
+    }
 }
-.navbar__input-check:checked ~ .navbar__contact--mobile {
-    display: none;
-}
-.navbar__input-check:checked ~ .navbar__icon, .navbar__logo{
-    align-self: start;
-}
-
 
 
 
 /* MAIN */
 .main{
-    margin-top: 100px;
+    margin-top: 6rem;
 }
 .main__banner{
     background-image: url(assets/paisaje.jpg);
