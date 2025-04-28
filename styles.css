@@ -118,6 +118,7 @@ header{
    border-radius: 50%;
    background-color: none;
    padding: 13px;
+   transition: .5s;
 }
 .navbar__icon:hover{
     background-color: var(--colorThird);
@@ -142,16 +143,17 @@ header{
     transition: .5s;
 }
 .navbar__input-check:checked ~ .navbar > .navbar__icon{
-    margin-top: 3px;
     display: flex;
     align-self: start;  
     align-items: center;
     justify-content: center;
+    margin: 3px 0;
 }
 .navbar__input-check:not(:checked) ~ .navbar > .navbar__icon{
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 3px 0;
 }   
 @media (max-width: 420px){
     .navbar{
