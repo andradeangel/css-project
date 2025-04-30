@@ -59,7 +59,9 @@ header{
     text-align: center;
 }
 .navbar__menu__list{
+    height: 190px;
     list-style: none;
+    overflow: visible;
 }
 .navbar__menu__list--item:last-child{
     margin-bottom: 15px;
@@ -85,6 +87,7 @@ header{
     height: 40px;
     border: 2px solid var(--colorFifth);
     position: relative;
+    top: -6px;
     padding: 10px;
     border-radius: var(--radio);
     background-color: var(--colorThird);
@@ -130,10 +133,18 @@ header{
 }
 .navbar__input-check:checked ~ .navbar{
     height: 19rem;
+    transition: .5s;
+}
+.navbar__input-check:not(:checked) ~ .navbar{
+    align-items: start;
+    transition: .5s;
 }
 .navbar__input-check:checked ~ .navbar > .navbar__logo{
     align-self: start;
-    margin-top: 3px;
+    margin: 3px 0;
+}
+.navbar__input-check:not(:checked) ~ .navbar > .navbar__logo{
+    margin: 3px 0;
 }
 .navbar__input-check:checked ~ .navbar > .navbar__menu{
     align-self: start;
@@ -141,6 +152,9 @@ header{
 .navbar__input-check:not(:checked) ~ .navbar > .navbar__menu{
     align-self: baseline;
     transition: .5s;
+}
+.navbar__input-check:checked ~ .navbar > .navbar__menu > .navbar__contact{
+    top: 0;
 }
 .navbar__input-check:checked ~ .navbar > .navbar__icon{
     display: flex;
@@ -154,7 +168,19 @@ header{
     align-items: center;
     justify-content: center;
     margin: 3px 0;
-}   
+}
+.navbar__input-check:not(:checked) ~ .navbar > .navbar__menu > .navbar__menu__list{
+    overflow: hidden;
+    height: 0;
+    transition: .5s;
+}
+.navbar__input-check:checked ~ .navbar > .navbar__menu > .navbar__menu__list{
+    overflow: hidden;
+    height: 190px;
+    transition: .5s;
+}
+
+/* Ajusta la altura máxima según sea necesario para tu diseño */
 @media (max-width: 420px){
     .navbar{
         padding: 20px 5px;
