@@ -180,10 +180,63 @@ header{
     transition: .5s;
 }
 
-/* Ajusta la altura máxima según sea necesario para tu diseño */
+
+/* MEDIA QUERYS NAVBAR*/
 @media (max-width: 420px){
     .navbar{
         padding: 20px 5px;
+    }
+}
+@media (min-width: 720px){
+    .navbar__input-check:checked ~ .navbar{
+        height: 6rem;
+    }
+    .navbar__input-check:checked ~ .navbar > .navbar__menu{
+        align-self: start;
+        padding: 14px 0;
+        display: flex;
+    }
+    .navbar__input-check:not(:checked) ~ .navbar > .navbar__menu{
+        display: flex;
+        padding: 14px 0;
+        align-self: baseline;
+        transition: .5s;
+    }
+    .navbar__input-check:checked ~ .navbar > .navbar__menu > .navbar__contact{
+        top: -6px;
+    }
+    .navbar__input-check:checked ~ .navbar > .navbar__icon{
+        display: none;
+    }
+    .navbar__input-check:not(:checked) ~ .navbar > .navbar__icon{
+        display: none;
+    }
+    .navbar__input-check:not(:checked) ~ .navbar > .navbar__menu > .navbar__menu__list{
+        display: flex;
+        height: auto;
+        margin-right: 10px;
+    }
+    .navbar__input-check:checked ~ .navbar > .navbar__menu > .navbar__menu__list{
+        display: flex;
+        height: auto;
+        margin-right: 20px;
+    }
+    .navbar__menu__list--item{
+        margin-right: 7px;
+        display: flex;
+        align-items: center;
+    }
+    .navbar__menu__list--item:last-child{
+        margin-bottom: 0;
+    }
+    .navbar__menu__list--item a{
+        margin-bottom: 0;
+    }
+    .navbar__menu__list--item a:hover{
+        letter-spacing: 0;
+        border-bottom: solid 1px var(--colorFifth);
+        text-shadow: 0 0 10px var(--colorFirst);
+        transition: 1s;
     }
 }
 
