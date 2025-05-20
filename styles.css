@@ -243,11 +243,12 @@ header{
 
 
 /* MAIN */
+/* MAIN BANNER */
 .main{
     margin-top: 6rem;
 }
 .main__banner{
-    height: calc(100vh - 6rem);
+    height: calc(100dvh - 6rem);
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(assets/paisaje.jpg);
     background-size: cover;
     display: flex;
@@ -285,4 +286,24 @@ header{
     text-shadow: 0 0 10px var(--colorFirst);
     border-bottom: solid 1px var(--colorFirst);
     transition: .5s;
+}
+
+/* MAIN CONTENT */
+.main__content{
+    background-color: #fee;
+}
+h1{
+    text-align: center;
+    padding: 2rem;
+    color: var(--colorSixth);
+}
+
+/* MAIN CONTACT */
+.main__contact{
+    background-color: var(--colorSecond);
+}
+
+/* FOOTER */
+footer{
+    background-color: var(--colorSixth);    
 }
