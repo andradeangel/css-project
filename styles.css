@@ -30,7 +30,8 @@ header{
     height: 6rem;
 }
 .navbar__logo{
-    width: 50px;
+    display: flex;
+    width: auto;
     height: 50px;
 }
 .navbar__logo > a{
@@ -49,6 +50,27 @@ header{
 }
 .navbar__logo > a > img:hover{
     filter: drop-shadow(0 0 10px var(--colorSixth));
+}
+.navbar__logo > h2{
+    display: none;
+}
+h2{
+    font-size: clamp(5px, 1rem, 100px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 15px 0 5px;
+    justify-content: center;
+    transition: .5s;
+}
+h2 > span{
+    display: block;
+}
+h2:hover{
+    text-shadow: 0 0 10px var(--colorSixth);
+    cursor: default;
+    transition: 1s;
+    
 }
 .material-symbols-outlined{
     width: 24px;
@@ -180,7 +202,6 @@ header{
     transition: .5s;
 }
 
-
 /* MEDIA QUERYS NAVBAR*/
 @media (max-width: 420px){
     .navbar{
@@ -188,6 +209,9 @@ header{
     }
 }
 @media (min-width: 720px){
+    .navbar__logo > h2{
+        display: flex;
+    }
     .navbar__input-check:checked ~ .navbar{
         height: 6rem;
     }
@@ -291,17 +315,32 @@ header{
 /* MAIN CONTENT */
 .main__content{
     background-color: #fee;
+    color: var(--colorSixth);
+}
+.main__content > p{
+    padding: 0 2rem;
+    letter-spacing: 1px;
+    line-height: 1.5;
 }
 h1{
     text-align: center;
     padding: 2rem;
     color: var(--colorSixth);
+    text-shadow: 0 0 2px var(--colorSixth);
 }
 
 /* MAIN CONTACT */
 .main__contact{
     background-color: var(--colorSecond);
 }
+
+/* MEDIA QUERYS MAIN */
+@media (min-width: 720px){
+    .main__content > p{
+        padding: 0 6rem;
+    }
+}
+    
 
 /* FOOTER */
 footer{
