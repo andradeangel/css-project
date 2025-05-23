@@ -24,6 +24,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 100;
 }
 .navbar{
     padding: 20px 40px;
@@ -338,15 +339,28 @@ h1{
     text-align: center;
 }
 .main__content__activities > .--items{
-    margin: 3rem 4rem;
+    margin: 3rem 1rem;
 }
 .main__content__activities > div > a{
-    display: inline-block;
+    display: block;
     width: 100%;
+    transition: .5s;
 }
 .main__content__activities > div > a > img{
     width: 100%;
     object-fit: cover;
+    display: block;
+}
+.main__content__activities .--items > div{
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: .5rem;
+    background-color: black;
+}
+.main__content__activities .--items > div > a:hover{
+    opacity: .4;
+    transition: .5s;
+    z-index: 1;
 }
 
 /* MAIN CONTACT */
@@ -362,6 +376,12 @@ h1{
     .main__content > h2{
         text-align: start;
         margin: 3rem 0 3rem 4rem;
+    }
+    
+}
+@media (min-width: 420px){
+    .main__content__activities > .--items{
+        margin: 3rem 4rem;
     }
 }
     
