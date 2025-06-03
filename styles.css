@@ -317,6 +317,8 @@ header{
 .main__content{
     background-color: #fee;
     color: var(--colorSixth);
+    display: flex;
+    flex-direction: column;
 }
 .main__content > p{
     padding: 0 2rem;
@@ -335,8 +337,10 @@ h1{
     background-color: var(--colorSixth);
     margin: 5rem;
 }
-.main__content > h2{
+h2{
     text-align: center;
+    color: var(--colorSixth);
+    text-shadow: 0 0 2px var(--colorSixth);
 }
 .main__content__activities .--items{
     margin: 3rem 4rem;
@@ -384,18 +388,33 @@ h1{
 /* MAIN CONTACT SECCION 3*/
 .main__contact{
     background-color: var(--colorSecond);
+    display: flex;
+    flex-direction: column;
+}
+.main__contact__form{
+    display: flex;
+    flex-direction: column;
+    margin: 4em 2rem;
+}
+.main__contact__form > p{
+    margin: 1rem 0;
 }
 
 /* MEDIA QUERYS MAIN */
 @media (min-width: 700px){
+    .main__banner > p{
+        max-width: 40rem;
+    }
     .main__content > p{
         padding: 0 6rem;
     }
-    .main__content > h2{
+    h2{
         text-align: start;
-        margin: 3rem 0 3rem 5rem;
+        margin: 0 0 3rem 5rem;
     }
     .main__content__activities{
+        max-width: 60rem;
+        align-self: center;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 2rem;
@@ -405,7 +424,8 @@ h1{
         margin: 0;
         display: flex;
         flex-direction: column;
-        gap: .5rem;
+        gap: 1rem;
+        align-self: normal;
     }
     .main__content__activities .--items > div{
         margin: 0;
@@ -417,13 +437,21 @@ h1{
     .main__content__activities .--items:nth-child(3) > div > a{
         height: 100%;
     }
+    .main__contact__form{
+        max-width: 40rem;
+        align-self: center;
+    }
+    .main__contact__form > h2{
+        text-align: center;
+        margin: 0;
+    }
 }
 @media (max-width: 420px){
     .main__content__activities > .--items{
         margin: 3rem 1rem;
     }
 }
-    
+
 
 
 /* FOOTER */
