@@ -411,6 +411,13 @@ h2{
     display: block;
     width: 100%;
     height: 3rem;
+    border-radius: var(--radio);
+    padding: 1rem;
+    border: 0;
+}
+.main__contact__form--inputs > input:focus{
+    outline: var(--colorSixth) 2px solid;
+    box-shadow: 0 0 5px var(--colorSixth);
 }
 
 /* MEDIA QUERYS MAIN */
