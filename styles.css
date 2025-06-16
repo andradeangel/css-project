@@ -268,7 +268,7 @@ header{
 
 
 /* MAIN */
-/* MAIN BANNER SECCION 1 */
+/* MAIN BANNER SECCIÓN 1 */
 .main{
     margin-top: 6rem;
 }
@@ -313,7 +313,7 @@ header{
     transition: .5s;
 }
 
-/* MAIN CONTENT SECCION 2 */
+/* MAIN CONTENT SECCIÓN 2 */
 .main__content{
     background-color: #fee;
     color: var(--colorSixth);
@@ -388,7 +388,7 @@ h2{
     margin-bottom: 0;
 }
 
-/* MAIN CONTACT SECCION 3*/
+/* MAIN CONTACT SECCIÓN 3*/
 .main__contact{
     background-color: var(--colorSecond);
     display: flex;
@@ -505,6 +505,7 @@ h2{
     }
     .main__contact__form--inputs > input:last-child{
         grid-column: 1 / 3; 
+        font-size: 1rem;
     }
 }
 @media (max-width: 420px){
@@ -521,28 +522,22 @@ h2{
 .aside__icon{
     background-color: var(--colorSixth);
     text-align: center;
-    align-items: center;
     align-content: center;
     width: 50px;
     height: 50px;
-    position: fixed;
+    /* position: fixed; */
     bottom: 20px;
     right: 25px;
     border-radius: 50%;
     color: #fff;
     z-index: 20;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity .3s;
-}
-.main__content:target ~ aside .aside__icon,
-.main__content:hover ~ aside .aside__icon {
-    opacity: 1;
-    visibility: visible;
-}
-.main__contact:target ~ aside .aside__icon {
-    opacity: 1;
-    visibility: visible;
+    transition: .3s;
+
+
+    view-timeline-name: --div;
+    view-timeline-axis: block;
+    animation-timeline: --div;
+    animation-name: asideIcon;
 }
 .aside__icon:hover{
     background-color: var(--colorThird);
@@ -553,6 +548,19 @@ h2{
     cursor: pointer;
 }
 
+/* MEDIA QUERYS ASIDE */
+@keyframes asideIcon {
+    from{
+        opacity: 0;
+        scale: 25%;
+    }
+    
+    to{
+        opacity: 1;
+        scale: 100%;
+    }
+    
+}
 
 /* FOOTER */
 footer{
