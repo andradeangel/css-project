@@ -518,6 +518,7 @@ h2{
 }
 
 
+
 /* ASIDE */
 .aside__icon{
     background-color: var(--colorSixth);
@@ -525,19 +526,13 @@ h2{
     align-content: center;
     width: 50px;
     height: 50px;
-    /* position: fixed; */
+    position: fixed;
     bottom: 20px;
     right: 25px;
     border-radius: 50%;
     color: #fff;
     z-index: 20;
-    transition: .3s;
-
-
-    view-timeline-name: --div;
-    view-timeline-axis: block;
-    animation-timeline: --div;
-    animation-name: asideIcon;
+    transition: .5s;
 }
 .aside__icon:hover{
     background-color: var(--colorThird);
@@ -549,20 +544,54 @@ h2{
 }
 
 /* MEDIA QUERYS ASIDE */
-@keyframes asideIcon {
-    from{
-        opacity: 0;
-        scale: 25%;
-    }
-    
-    to{
-        opacity: 1;
-        scale: 100%;
-    }
-    
-}
+
+
 
 /* FOOTER */
-footer{
-    background-color: var(--colorSixth);    
+    footer{
+        background-color: var(--colorSixth);   
+        display: flex; 
+        flex-direction: column;
+    }
+    .footer__container{
+        height: 8rem;
+        text-align: center;
+        align-content: end;
+        color: #fff;
+        text-shadow: 0 0 10px var(--colorThird);
+    }
+    .footer__container > div{
+        justify-content: center;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: .5rem;
+    }
+    .footer__copyright{
+        height: 5rem;
+        text-align: center;
+        margin-top: 1rem;
+        color: #fff;
+        font-size: .7rem;
+    }
+
+/* FOOTER MEDIA QUERYS */
+@media (min-width: 700px){
+    footer{
+        flex-direction: row;
+    }
+    .footer__container{
+        height: 15rem;
+        width: 60%;
+        align-content: center;
+        padding-right: 3rem;
+    }
+    .footer__container > div{
+        justify-content: end;
+    }
+    .footer__copyright{
+        height: 13rem;
+        width: 40%;
+        align-content: center;
+        text-align: left;
+    }
 }
