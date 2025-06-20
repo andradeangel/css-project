@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
     --colorFirst: #22F052;
     --colorSecond: #3CC55C;
     --colorThird: #499B5C;
@@ -13,6 +15,8 @@
 }
 html{
     background-color: #fee;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
 }
 
 
@@ -388,6 +392,12 @@ h2{
     margin-bottom: 0;
 }
 
+/* MAIN CONTENT MODALES SECCIÓN 2*/
+.main__features{
+    display: none;
+}
+
+
 /* MAIN CONTACT SECCIÓN 3*/
 .main__contact{
     background-color: var(--colorSecond);
@@ -543,8 +553,6 @@ h2{
     cursor: pointer;
 }
 
-/* MEDIA QUERYS ASIDE */
-
 
 
 /* FOOTER */
@@ -564,7 +572,7 @@ h2{
         justify-content: center;
         display: flex;
         flex-direction: row-reverse;
-        gap: .5rem;
+        gap: .2rem;
     }
     .footer__copyright{
         height: 5rem;
@@ -581,16 +589,17 @@ h2{
     }
     .footer__container{
         height: 15rem;
-        width: 60%;
+        width: 50%;
         align-content: center;
-        padding-right: 3rem;
+        padding-right: 1.5rem;
     }
     .footer__container > div{
         justify-content: end;
     }
     .footer__copyright{
         height: 13rem;
-        width: 40%;
+        width: 50%;
+        padding-left: 1.5rem;
         align-content: center;
         text-align: left;
     }
