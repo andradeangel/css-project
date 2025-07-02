@@ -28,7 +28,7 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 20;
 }
 .navbar{
     padding: 20px 40px;
@@ -408,7 +408,7 @@ h2{
     align-items: center;
     text-align: center;
     justify-content: center;
-    padding: 6rem 3rem 0 3rem;
+    padding: 0 3rem;
     gap: 1rem;
     overflow: hidden;
     pointer-events: none;
@@ -417,7 +417,7 @@ h2{
     opacity: 0;
     transform: scale(0.3);
     transition: .3s;
-    z-index: 20;
+    z-index: 30;
 }
 .main__features > div{
     width: clamp(10rem, 100%, 25rem);
