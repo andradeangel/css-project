@@ -403,13 +403,27 @@ h2{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.9);
     color: #fff;
     align-items: center;
     text-align: center;
-    padding: 3rem;
-    display: none;
+    justify-content: center;
+    padding: 6rem 3rem 0 3rem;
+    gap: 1rem;
+    overflow: hidden;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: scale(0.3);
+    transition: .3s;
     z-index: 20;
+}
+.main__features > div{
+    width: clamp(10rem, 100%, 25rem);
+    border-radius: 10px;
+    overflow: hidden;
+    gap: 1rem;
 }
 .main__features > div > img{
     width: 100%;
@@ -420,25 +434,20 @@ h2{
 }
 .main__features > div > label{
     position: relative;
-    left: 30%;
-    margin-top: 20px;
+    left: calc(50% - 12px);
+    color: var(--colorFirst);
+    text-shadow: 1px 1px 10px var(--colorSixth);
     cursor: pointer;
     user-select: none;
 }
-.modal__input-check1:checked ~ .main__features--baile{
-    display: flex;
-}
-.modal__input-check2:checked ~ .main__features--volley{
-    display: flex;
-}
-.modal__input-check3:checked ~ .main__features--natacion{
-    display: flex;
-}
-.modal__input-check4:checked ~ .main__features--box{
-    display: flex;
-}
+.modal__input-check1:checked ~ .main__features--baile,
+.modal__input-check2:checked ~ .main__features--volley,
+.modal__input-check3:checked ~ .main__features--natacion,
+.modal__input-check4:checked ~ .main__features--box,
 .modal__input-check5:checked ~ .main__features--futbol{
-    display: flex;
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
 }
 
 /* MAIN CONTACT SECCIÓN 3*/
@@ -535,6 +544,19 @@ h2{
     }
     .main__content__activities .--items:nth-child(8) > div > label{
         height: 100%;
+    }
+    .modal__input-check1:checked ~ .main__features--baile,
+    .modal__input-check2:checked ~ .main__features--volley,
+    .modal__input-check3:checked ~ .main__features--natacion,
+    .modal__input-check4:checked ~ .main__features--box,
+    .modal__input-check5:checked ~ .main__features--futbol{
+        flex-direction: row;
+        transform: scale(1);
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .main__features > div{
+        gap: 3rem;
     }
     .main__contact__form{
         max-width: 40rem;
