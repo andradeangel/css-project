@@ -28,26 +28,6 @@ Este repositorio contiene una página web de ensayo creada con HTML y CSS. El pr
   - (recursos gráficos)
 - README.md
 
-Ajusta la estructura real si tus archivos tienen nombres distintos; la anterior es una sugerencia común.
-
-## Cómo ver el proyecto localmente
-
-1. Clona el repositorio (opcional):
-
-   git clone https://github.com/andradeangel/css-project.git
-
-2. Abrir `index.html` directamente en el navegador (doble clic) o usar un servidor local para desarrollo:
-
-   - Con Python 3:
-     - `python -m http.server 8000`
-     - Abrir `http://localhost:8000`
-
-   - Con Node (serve):
-     - `npm i -g serve`
-     - `serve .`
-
-   - Con VS Code: instala la extensión Live Server y pulsa "Go Live" para recarga automática.
-
 ## Qué se practica en este proyecto
 
 - Estructura semántica con etiquetas HTML5 (header, nav, main, section, article, footer).
@@ -66,37 +46,6 @@ Ajusta la estructura real si tus archivos tienen nombres distintos; la anterior 
 - Comprobar contraste de color (p. ej. herramientas como Lighthouse o axe).
 - Probar en distintos navegadores y tamaños de pantalla.
 
-## Ideas de mejora
-
-- Añadir más páginas (portfolio, proyectos, contacto).
-- Modularizar estilos y crear componentes reutilizables.
-- Integrar un preprocesador (Sass) o herramientas de build (PostCSS).
-- Añadir pruebas de accesibilidad y rendimiento (Lighthouse, axe).
-- Automatizar despliegue con GitHub Pages.
-
-## Contribuciones
-
-Si quieres contribuir:
-
-1. Haz fork del repositorio.
-2. Crea una rama descriptiva: `git checkout -b feat/nueva-seccion`.
-3. Realiza tus cambios y pruebas locales.
-4. Envía un Pull Request explicando el cambio y la motivación.
-
-## Licencia
-
-Este proyecto está bajo la licencia MIT — añade o cambia la licencia según prefieras.
-
-```
-MIT License
-```
-
 ## Autor
 
-- andradeangel
-
----
-
-Si quieres, puedo:
-- Ajustar el README a la estructura exacta de tu repositorio si me indicas los archivos actuales.
-- Añadir badges (estado del build, licencia, GitHub Pages) o un ejemplo de paleta de colores y snippets de CSS usados en el proyecto.
+- Andrade Angel
